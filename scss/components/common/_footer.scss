@@ -1,0 +1,61 @@
+.footer {
+  padding: 100px;
+  &--inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 100px;
+    height: 300px;
+    @include mq-sp {
+      flex-direction: column-reverse;
+      align-items: center;
+      
+      height: 500px;
+    }
+  }
+  background: #222;
+  color: #efefef;
+  &__main {
+    li a {
+      width: 100px;
+      padding: 5px 10px;
+      display: inline-block;
+      color: #efefef;
+      &:hover {
+        color: #ddd;
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: transparent;
+        transition: all 0.1s ease-in-out;
+      }
+      &:hover:after {
+        width: 100%;
+        background: #ddd;
+      }
+    }
+  }
+  &__logo {
+    margin-bottom: 10px;
+    height: 100px;
+    background: url(../images/logo/logo-square-white.svg) center/contain no-repeat;
+  }
+
+  &__sns {
+    margin-bottom: 10px;
+    a {
+      color: #efefef;
+      font-size: 30px;
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+  &__copy {
+    text-align: center;
+    bottom: 0;
+  }
+}

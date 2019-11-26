@@ -1,0 +1,123 @@
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  .brand {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    background: url(../images/logo/logo-square-black.svg) center/contain no-repeat;
+  }
+}
+
+/* 
+ * SP Menu Drawer style 
+ **/
+#sp-nav {
+  position: absolute;
+  top: 27px;
+  right: 20px;
+}
+
+#nav-toggle {
+  display: block;
+  position: relative;
+  z-index: 1;
+  input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    &:checked ~ span { // transform bars into cross mark
+      opacity: 1;
+      transform: rotate(45deg) translate(0, 9px);
+      background: #222;
+      &:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+      &:nth-last-child(3) { // hide middle bar when checked 
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+    }
+    &:checked ~ ul { // draw submenu when checked
+      transform: translate(-100%, 0);
+    }
+  }
+  & span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: $color-neutral;
+    border-radius: 3px;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.8, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.8, 0.2, 0.05, 1), opacity 0.55s ease;
+    &:nth-child(3) { // make the middle one longer
+      width: 40px;
+      margin-left: -10px;
+    }
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+}
+
+/* drawer content box */
+#nav-content {
+  text-align: left;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: -54px 0 0 50px;
+  padding: 20vh 0 0 30vw;
+  font-size: 36px;
+  background: #eee;
+  transform-origin: 0% 0%;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  transition: -webkit-transform 0.5s cubic-bezier(0.8, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.8, 0.2, 0.05, 1);
+  @include mq-sp {
+    font-size: 24px;
+    padding: 20vh 0 0 10vw;
+  }
+  li:first-child {
+    margin: 30px auto;
+  }
+  li a {
+    width: 200px;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #333;
+    &:hover {
+      color: #2b272c;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: transparent;
+      transition: all 0.1s ease-in-out;
+    }
+    &:hover:after {
+      width: 100%;
+      background: #555;
+    }
+  }
+}

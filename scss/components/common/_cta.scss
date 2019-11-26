@@ -1,0 +1,27 @@
+.cta {
+  text-align: center;
+  height: 400px;
+  font-size: 48px;
+  text-transform: uppercase;
+  background: url(../images/mtg.jpg) center/cover no-repeat;
+  @include mq-sp {
+    font-size: 24px;
+    height: 300px;
+  }
+  .overlay {
+    height: 400px;
+    background: rgba(0,0,0,0.3);
+    @include mq-sp {
+      height: 300px;
+    }
+  }
+  a h3 {
+    height: 400px;
+    color: $color-sub;
+    line-height: 400px;
+    @include mq-sp {
+      height: 300px;
+      line-height: 300px;
+    }
+  }
+}

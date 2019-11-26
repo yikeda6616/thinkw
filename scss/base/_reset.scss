@@ -1,0 +1,26 @@
+// @import './lib/normalize';
+
+/* Base css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-main;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  position: relative;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $color-main;
+}
+
+.wrapper {
+  // so that humbuger menu wont disapper when open in IE 11 
+  display: block;
+}

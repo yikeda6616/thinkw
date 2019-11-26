@@ -1,0 +1,89 @@
+.about {
+  &__hero {
+    text-align: center;
+    height: 600px;
+    margin-bottom: 60px;
+    background: url('../images/office.jpg') center/cover no-repeat;
+    @include mq-sp {
+      height: 400px;
+    }
+    h3 {
+      color: $color-main-strong;
+      font-size: 36px;
+      display: inline-block;
+      line-height: 600px;
+      @include mq-sp {
+        line-height: 400px;
+        font-size:  18px;
+      }
+    }
+  }
+  &__overlay {
+    height: 600px;
+    background: rgba(255,255,255, 0.3);
+    @include mq-sp {
+      height: 400px;
+    }
+  }
+  &__feature {
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    @include mq-sp {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    padding: 40px;
+    width: 33.3%;
+    @include mq-sp {
+      width: 100%;
+    }
+    h4 {
+      display: inline-block;
+      height: 70px;
+      text-align: center;
+      font-size: 20px;
+      @include mq-sp {
+        margin-bottom: 10px;
+      }
+    }
+    p {
+      line-height: 1.6;
+      @include mq-sp {
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.clients {
+  max-width: 1366px;
+  margin: 0 auto;
+  &__logos {
+    display: flex;
+    justify-content: space-around;
+    @include mq-sp {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    &:nth-child(1) {
+      background: url(../images/clients/michi.jpg) center/contain no-repeat;
+    }
+    &:nth-child(2) {
+      background: url(../images/clients/teatora.png) center/cover no-repeat;
+    }
+    &:nth-child(3) {
+      background: url(../images/clients/skagen.png) center/contain no-repeat;
+    }
+    &:nth-child(4) {
+      background: url(../images/clients/karma.png) center/cover no-repeat;
+    }
+  }
+
+}

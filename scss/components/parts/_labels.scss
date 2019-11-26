@@ -1,0 +1,24 @@
+.pageLabel {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 200px 0;
+  font-size: 48px;
+  font-weight: 900;
+  color: $color-main-strong;
+  @include mq-sp {
+    padding: 150px 0;
+    font-size: 36px;
+  }
+}
+
+.sectionLabel {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: $color-main-strong;
+  @include mq-sp {
+    padding: 50px 0;
+    font-size: 24px;
+  }
+}

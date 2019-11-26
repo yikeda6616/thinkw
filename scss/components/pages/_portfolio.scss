@@ -1,0 +1,118 @@
+.portfolio {
+  color: $color-main;
+  max-width: 1366px;
+  margin: 0 auto;
+  &__item {
+    padding-bottom: 400px;
+    @include mq-sp {
+      padding-bottom: 200px;
+    }
+    &:last-child {
+      padding-bottom: 200px;
+      @include mq-sp {
+        padding-bottom: 100px;
+      }
+    }
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 36px;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    @include mq-sp {
+      flex-direction: column;
+    }
+    &__result {
+      padding: 20px;
+      width: 50%;
+      text-align: center;
+      @include mq-sp {
+        width: 100%;
+      }
+      p:nth-child(1) {
+        font-size: 120px;
+        @include mq-sp {
+          font-size: 72px;
+        }
+        span {
+          font-size: 42px;
+        }
+      }
+      p:nth-child(2) {
+        font-size: 16px;
+      }
+    }
+    &__detail {
+      padding: 40px;
+      width: 50%;
+      @include mq-sp {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  }
+  &__client {
+    @include mq-sp {
+      text-align: center;
+    }
+  }
+}
+.mockup {
+  height: 90vh;
+  @include mq-sp {
+    height: 300px;
+  }
+  &--michi {
+    background: url(../images/portfolio/michi-mockup.png) center/contain no-repeat;
+  }
+  &--teatora {
+    background: url(../images/portfolio/teatora-mockup.png) center/contain no-repeat;
+  }
+  &--skagen {
+    background: url(../images/portfolio/skagen-mockup.png) center/contain no-repeat;
+  }
+}
+
+blockquote {
+  position: relative;
+  padding: 8px 15px;
+  margin-top: 2.5em;
+  box-sizing: border-box;
+  font-style: italic;
+  color: $color-main;
+  background: #ddeeff;
+  font-weight: 700;
+  @include mq-sp {
+    font-size: 0.9em;
+  }
+  &:before {
+    display: inline-block;
+    position: absolute;
+    top: -35px;
+    left: 0px;
+    vertical-align: middle;
+    content: "“";
+    font-family: sans-serif;
+    color: #ddeeff;
+    font-size: 90px;
+    line-height: 1;
+    @include mq-sp {
+      font-size: 60px;
+      top: -22px;
+    }
+  }
+  p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
+  cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+  }
+}

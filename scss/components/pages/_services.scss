@@ -1,0 +1,30 @@
+.service {
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 200px;
+  align-items: center;
+  &__heading {
+    display: inline-block;
+    color: #777;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 80px;
+    @include mq-sp {
+      font-size: 64px;
+    }
+  }
+  &__text {
+    display: inline-block;
+    width: 50%;
+    line-height: 1.8;
+    @include mq-sp {
+      line-height: 1.4;
+    }
+  }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
